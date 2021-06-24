@@ -19,6 +19,10 @@ systemctl daemon-reload
 systemctl start rngd
 systemctl enable rngd
 
+echo "-- Installing MIT KDC"
+./install_mit_kdc.sh
+echo "-- Instalation of MIT KDC Complete"
+
 echo "-- Installing requirements for Stream Messaging Manager"
 yum install -y gcc-c++ make 
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash - 
