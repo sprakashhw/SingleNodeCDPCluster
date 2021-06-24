@@ -54,6 +54,7 @@ DOCKERDEVICE=$3
 
 echo "-- Configure networking"
 PUBLIC_IP=`curl https://api.ipify.org/`
+PUBLIC_HOSTNAME=`curl http://169.254.169.254/latest/meta-data/public-hostname`
 hostnamectl set-hostname `hostname -f`
 echo "`hostname -I` `hostname`" >> /etc/hosts
 sed -i "s/HOSTNAME=.*/HOSTNAME=`hostname`/" /etc/sysconfig/network
