@@ -30,11 +30,6 @@
 		"kudu-KUDU_TSERVER-BASE",                
                 "livy-LIVY_SERVER-BASE",
                 "oozie-OOZIE_SERVER-BASE",
-                "ozone-GATEWAY-BASE",
-                "ozone-OZONE_DATANODE-BASE",
-                "ozone-OZONE_MANAGER-BASE",
-                "ozone-OZONE_RECON-BASE",
-                "ozone-STORAGE_CONTAINER_MANAGER-BASE",
                 "phoenix-PHOENIX_QUERY_SERVER-BASE",
                 "ranger-RANGER_ADMIN-BASE",
                 "ranger-RANGER_TAGSYNC-BASE",
@@ -814,55 +809,6 @@
                 {
                     "refName": "hbase-MASTER-BASE",
                     "roleType": "MASTER",
-                    "base": true
-                }
-            ]
-        },
-        {
-            "refName": "ozone",
-            "serviceType": "OZONE",
-            "serviceConfigs": [
-                {
-                    "name": "ranger_service",
-                    "ref": "ranger"
-                },
-                {
-                    "name": "ozone.security.enabled",
-                    "value": "true"
-                },
-		{
-                    "name" : "ozone.service.id",
-                    "value" : "ozone1"
-                },
-                {
-                    "name": "hdfs_service",
-                    "ref": "hdfs"
-                }
-            ],
-            "roleConfigGroups": [
-                {
-                    "refName": "ozone-GATEWAY-BASE",
-                    "roleType": "GATEWAY",
-                    "base": true
-                },
-                {
-                    "refName": "ozone-OZONE_RECON-BASE",
-                    "roleType": "OZONE_RECON",
-                    "base": true
-                },
-                {
-                    "refName": "ozone-STORAGE_CONTAINER_MANAGER-BASE",
-                    "roleType": "STORAGE_CONTAINER_MANAGER",
-                    "base": true
-                },
-                {
-                    "refName": "ozone-OZONE_DATANODE-BASE",
-                    "roleType": "OZONE_DATANODE",
-                    "base": true
-                },
-                {
-                    "refName": "ozone-OZONE_MANAGER-BASE",
-                    "roleType": "OZONE_MANAGER",
                     "base": true
                 }
             ]
