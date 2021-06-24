@@ -225,7 +225,7 @@ sed -i "s/YourCDSWDomain/cdsw.$PUBLIC_IP.nip.io/g" $TEMPLATE
 sed -i "s/YourPrivateIP/`hostname -I | tr -d '[:space:]'`/g" $TEMPLATE
 sed -i "s#YourDockerDevice#$DOCKERDEVICE#g" $TEMPLATE
 
-sed -i "s/YourHostname/`hostname -f`/g" scripts/create_cluster_krb.py
+sed -i "s/YourHostname/$PUBLIC_HOSTNAME/g" scripts/create_cluster_krb.py
 
 python scripts/create_cluster_krb.py $TEMPLATE
 
