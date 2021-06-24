@@ -57,7 +57,7 @@ body.items=[
     cm_client.ApiConfig(name='KDC_TYPE', value='MIT KDC'),  
     cm_client.ApiConfig(name='KRB_ENC_TYPES', value='aes256-cts-hmac-sha1-96 aes128-cts-hmac-sha1-96 arcfour-hmac-md5'), 
     cm_client.ApiConfig(name='SECURITY_REALM', value='EXAMPLE.COM'), 
-    cm_client.ApiConfig(name='KRB_MANAGE_KRB5_CONF', value='true')
+    cm_client.ApiConfig(name='KRB_MANAGE_KRB5_CONF', value='false')
     ]
 api_response = cm_api.update_config(message="KRB", body=body)
 
