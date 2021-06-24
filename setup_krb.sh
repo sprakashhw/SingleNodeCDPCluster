@@ -20,7 +20,7 @@ systemctl start rngd
 systemctl enable rngd
 
 echo "-- Installing MIT KDC"
-./install_mit_kdc.sh
+sh ./install_mit_kdc.sh
 echo "-- Instalation of MIT KDC Complete"
 
 echo "-- Installing requirements for Stream Messaging Manager"
