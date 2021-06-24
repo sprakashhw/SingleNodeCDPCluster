@@ -592,7 +592,7 @@
                         },
             	{
              	    "name": "kafka.properties_role_safety_valve",
-              	    "value": "listeners=PLAINTEXT://hsotname_changeme:9092\nadvertised.listeners=PLAINTEXT://hsotname_changeme:9092\n"
+              	    "value": "listeners=PLAINTEXT://kafka_public_listener:9092\nadvertised.listeners=PLAINTEXT://kafka_public_listener:9092\n"
             }
                     ],
                     "base": true
