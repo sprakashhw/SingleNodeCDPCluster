@@ -589,7 +589,11 @@
                         {
                             "name": "broker_max_heap_size",
                             "value": "512"
-                        }
+                        },
+            	{
+             	    "name": "kafka.properties_role_safety_valve",
+              	    "value": "listeners=PLAINTEXT://hsotname_changeme:9092\nadvertised.listeners=PLAINTEXT://hsotname_changeme:9092\n"
+            }
                     ],
                     "base": true
                 }
