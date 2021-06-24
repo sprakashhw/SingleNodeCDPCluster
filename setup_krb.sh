@@ -229,9 +229,9 @@ sed -i "s/kafka_public_listener/$PUBLIC_HOSTNAME/g" $TEMPLATE
 sed -i "s/YourCDSWDomain/cdsw.$PUBLIC_IP.nip.io/g" $TEMPLATE
 sed -i "s/YourPrivateIP/`hostname -I | tr -d '[:space:]'`/g" $TEMPLATE
 sed -i "s#YourDockerDevice#$DOCKERDEVICE#g" $TEMPLATE
-sed -i "s/YourHostname/$PUBLIC_HOSTNAME/g" scripts/create_cluster_krb.py
+sed -i "s/YourHostname/$PUBLIC_HOSTNAME/g" /home/centos/SingleNodeCDPCluster/scripts/create_cluster_krb.py
 
-python scripts/create_cluster_krb.py $TEMPLATE
+python /home/centos/SingleNodeCDPCluster/scripts/create_cluster_krb.py $TEMPLATE
 
 # configure and start EFM and Minifi
 service efm start
