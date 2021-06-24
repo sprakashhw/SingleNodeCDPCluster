@@ -62,7 +62,7 @@ body.items=[
 api_response = cm_api.update_config(message="KRB", body=body)
 
 # Import KDC admin credentials
-cmd = cm_api.import_admin_credentials(password='BadPass#1', username='cloudera-scm/admin@CLOUDERA.COM')
+cmd = cm_api.import_admin_credentials(password='Databricks@2021', username='admin/admin@CLOUDERA.COM')
 wait(cmd)
 
 
