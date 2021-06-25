@@ -10,6 +10,8 @@ systemctl enable kadmin
 systemctl restart kadmin
 kadmin.local  -q "addprinc -pw Databricks@2021  admin/admin@EXAMPLE.COM"
 kadmin.local  -q "addprinc -pw Databricks@2021  kafka/$PUBLIC_HOSTNAME@EXAMPLE.COM"
+kadmin.local  -q "addprinc -pw Databricks@2021  kafka_user1@EXAMPLE.COM"
+kadmin.local  -q "addprinc -pw Databricks@2021  kafka_user2@EXAMPLE.COM"
 systemctl restart kadmin
 systemctl start krb5kdc
 systemctl enable krb5kdc
