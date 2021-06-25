@@ -587,7 +587,7 @@
                         },
             	{
              	    "name": "kafka.properties_role_safety_valve",
-              	    "value": "listeners=SASL_PLAINTEXT://YourHostname:9092\nadvertised.listeners=SASL_PLAINTEXT://kafka_public_listener:9092\n"
+              	    "value": "listeners=SASL_PLAINTEXT://YourHostname:9092\nadvertised.listeners=SASL_PLAINTEXT://kafka_public_listener:9093\n"
             }
                     ],
                     "base": true
